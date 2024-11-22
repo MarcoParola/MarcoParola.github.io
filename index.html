@@ -14,6 +14,25 @@
       gtag('config', 'G-5WM2WTYX26');
     </script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const images = document.querySelectorAll(".avatar");
+        let currentIndex = 0;
+
+        function showNextImage() {
+          images[currentIndex].classList.remove("active");
+          currentIndex = (currentIndex + 1) % images.length;
+          images[currentIndex].classList.add("active");
+        }
+
+        // Initialize the first image as active
+        images[currentIndex].classList.add("active");
+
+        // Change image every 5 seconds
+        setInterval(showNextImage, 5000);
+      });
+    </script>
+
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,7 +71,10 @@
   <body>
     <section id="content">
       <!-- Avatar image -->
-      <img src="image.jpg" alt="Marco Parola" class="avatar" />
+      <div class="avatar-container">
+        <img src="./imgs/image.jpg" alt="Marco Parola" class="avatar" />
+        <img src="./imgs/comix.jpg" alt="Marco Parola" class="avatar" />
+      </div>
 
       <!-- Text -->
       <h1>Hi, I'm Marco Parola!</h1>
@@ -79,9 +101,6 @@
         </li>
         <li>
           <a href="https://scholar.google.com/citations?user=Jg2GU-EAAAAJ&hl=it&oi=ao" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-        </li>
-        <li>
-          <a href="https://dii.unipi.it/" title="Institutional website"><i class="fas fa-university"></i></a>
         </li>
         <li>
           <a href="https://marcoparola.github.io/cv/" title="CV"><i class="ai ai-cv"></i></a>
