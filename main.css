@@ -45,6 +45,30 @@ a:hover {
     transition: opacity 1s ease-in-out;
 }
 
+@media (max-width: 650px) {
+    #content {
+        width: 90%;
+        padding: 16px;
+    }
+
+    .avatar-container {
+        width: 150px; /* Adjust as needed for smaller screens */
+        height: 150px; /* Adjust as needed for smaller screens */
+    }
+
+    .avatar {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust as needed for smaller screens */
+    }
+
+    p {
+        font-size: 0.85em; /* Adjust as needed for smaller screens */
+    }
+}
+
 .avatar.active {
     opacity: 1;
 }
